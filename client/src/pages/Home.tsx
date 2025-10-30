@@ -10,29 +10,29 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-32 pb-24 px-8">
+      <section className="pt-12 sm:pt-20 lg:pt-32 pb-12 sm:pb-16 lg:pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight tracking-tight">
                 Get any task done, safely.
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 Pikando connects people who need help with verified locals who can help.
               </p>
               <WaitlistForm variant="hero" />
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-muted-foreground mt-3 sm:mt-4">
                 Launching first in Bengaluru.
               </p>
             </div>
             
-            <div className="relative">
+            <div className="relative order-first lg:order-last">
               <div className="aspect-square bg-gradient-to-br from-primary/20 to-transparent rounded-lg flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary flex items-center justify-center">
-                    <ShieldCheck className="w-12 h-12 text-primary-foreground" />
+                <div className="text-center p-6 sm:p-8">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto mb-4 sm:mb-6 rounded-full bg-primary flex items-center justify-center">
+                    <ShieldCheck className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-primary-foreground" />
                   </div>
-                  <p className="text-2xl font-semibold text-foreground">
+                  <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-foreground">
                     Trusted. Verified. Secure.
                   </p>
                 </div>
@@ -42,9 +42,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 px-8 bg-muted">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-muted">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <ValueCard
               icon={Briefcase}
               title="Versatile tasks"
@@ -64,13 +64,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 px-8">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-4xl font-semibold text-foreground text-center mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground text-center mb-8 sm:mb-12 lg:mb-16">
             How it works
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
             <StepCard
               number={1}
               title="Post a task"
@@ -90,12 +90,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 px-8 bg-card border-y border-border">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-card border-y border-border">
         <div className="max-w-[1200px] mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-foreground mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground mb-3 sm:mb-4 px-4">
             Be first to know when we launch in your area.
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 px-4">
             Join thousands of early users waiting for Pikando.
           </p>
           <WaitlistForm variant="banner" />

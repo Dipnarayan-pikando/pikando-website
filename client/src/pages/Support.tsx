@@ -36,37 +36,37 @@ export default function Support() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-24 pb-16 px-8">
+      <section className="pt-12 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 lg:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[800px] mx-auto">
-          <h1 className="text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 sm:mb-8 leading-tight">
             Need help or have a question? We're here.
           </h1>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="p-6 bg-card rounded-lg border border-card-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12 lg:mb-16">
+            <div className="p-5 sm:p-6 bg-card rounded-lg border border-card-border">
               <h3 className="text-sm font-semibold text-foreground mb-2">Email</h3>
               <a 
                 href="mailto:support@pikando.com" 
-                className="text-base text-muted-foreground hover-elevate active-elevate-2 px-2 py-1 -ml-2 rounded-md inline-block"
+                className="text-sm sm:text-base text-muted-foreground hover-elevate active-elevate-2 px-2 py-1 -ml-2 rounded-md inline-block break-all"
                 data-testid="link-support-email"
               >
                 support@pikando.com
               </a>
             </div>
             
-            <div className="p-6 bg-card rounded-lg border border-card-border">
+            <div className="p-5 sm:p-6 bg-card rounded-lg border border-card-border">
               <h3 className="text-sm font-semibold text-foreground mb-2">Response Time</h3>
-              <p className="text-base text-muted-foreground">Within 2 business days</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Within 2 business days</p>
             </div>
             
-            <div className="p-6 bg-card rounded-lg border border-card-border">
+            <div className="p-5 sm:p-6 bg-card rounded-lg border border-card-border sm:col-span-2 lg:col-span-1">
               <h3 className="text-sm font-semibold text-foreground mb-2">Hours</h3>
-              <p className="text-base text-muted-foreground">Mon–Fri, 10 AM–6 PM IST</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Mon–Fri, 10 AM–6 PM IST</p>
             </div>
           </div>
 
-          <div className="bg-card rounded-lg border border-card-border p-8 mb-16">
-            <h2 className="text-2xl font-semibold text-foreground mb-6">Contact Form</h2>
+          <div className="bg-card rounded-lg border border-card-border p-5 sm:p-6 lg:p-8 mb-10 sm:mb-12 lg:mb-16">
+            <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-5 sm:mb-6">Contact Form</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -139,10 +139,10 @@ export default function Support() {
             </form>
           </div>
 
-          <div className="mb-16">
-            <h2 className="text-2xl font-semibold text-foreground mb-8">Frequently Asked Questions</h2>
+          <div className="mb-10 sm:mb-12 lg:mb-16">
+            <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8">Frequently Asked Questions</h2>
             
-            <div className="bg-card rounded-lg border border-card-border p-8">
+            <div className="bg-card rounded-lg border border-card-border p-5 sm:p-6 lg:p-8">
               <FAQItem
                 question="When will the app launch?"
                 answer="We're rolling out city by city, starting with Bengaluru. Join our waitlist to be notified when we launch in your area."

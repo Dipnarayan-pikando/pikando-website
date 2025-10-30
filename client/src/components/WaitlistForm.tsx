@@ -38,19 +38,19 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
 
   if (variant === "banner") {
     return (
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto px-4 sm:px-0">
         <Input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-1 h-14 text-base"
+          className="flex-1 h-12 sm:h-14 text-sm sm:text-base"
           data-testid="input-email-banner"
         />
         <Button 
           type="submit" 
           size="lg"
-          className="h-14 px-8 bg-primary text-primary-foreground font-semibold hover-elevate active-elevate-2"
+          className="h-12 sm:h-14 px-6 sm:px-8 bg-primary text-primary-foreground text-sm sm:text-base font-semibold hover-elevate active-elevate-2 whitespace-nowrap"
           disabled={isSubmitting}
           data-testid="button-submit-banner"
         >
@@ -67,13 +67,13 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
         placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="flex-1 h-14 text-base"
+        className="flex-1 h-12 sm:h-14 text-sm sm:text-base"
         data-testid="input-email-hero"
       />
       <Button 
         type="submit" 
         size="lg"
-        className="h-14 px-8 bg-primary text-primary-foreground font-semibold hover-elevate active-elevate-2"
+        className="h-12 sm:h-14 px-6 sm:px-8 bg-primary text-primary-foreground text-sm sm:text-base font-semibold hover-elevate active-elevate-2 whitespace-nowrap"
         disabled={isSubmitting}
         data-testid="button-submit-hero"
       >

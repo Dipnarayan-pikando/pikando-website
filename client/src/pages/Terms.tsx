@@ -6,18 +6,18 @@ export default function Terms() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-24 pb-16 px-8">
+      <section className="pt-12 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 lg:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[800px] mx-auto">
-          <h1 className="text-5xl font-bold text-foreground mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
             Terms of Use
           </h1>
-          <p className="text-sm font-medium text-muted-foreground mb-12">
+          <p className="text-xs sm:text-sm font-medium text-muted-foreground mb-8 sm:mb-10 lg:mb-12">
             Last updated: January 2025
           </p>
 
-          <div className="space-y-12 text-base leading-relaxed">
+          <div className="space-y-8 sm:space-y-10 lg:space-y-12 text-sm sm:text-base leading-relaxed">
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Acceptance of Terms</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-3 sm:mb-4">Acceptance of Terms</h2>
               <p className="text-muted-foreground">
                 By accessing or using the Pikando website ("Site"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our Site. Your continued use of the Site constitutes your acceptance of any changes or updates to these terms.
               </p>
