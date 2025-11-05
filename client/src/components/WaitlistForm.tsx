@@ -11,30 +11,55 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const FORMSPREE_URL = "https://formspree.io/f/mzzkneeg";
+
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email || !email.includes("@")) {
-      toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-      });
-      return;
-    }
+  e.preventDefault();
 
-    setIsSubmitting(true);
-    
-    setTimeout(() => {
+  if (!email || !email.includes("@")) {
+    toast({
+      title: "Invalid email",
+      description: "Please enter a valid email address.",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const res = await fetch(FORMSPREE_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+
+    if (res.ok) {
       toast({
         title: "You're on the list!",
         description: "We'll notify you when Pikando launches in your area.",
       });
       setEmail("");
-      setIsSubmitting(false);
-    }, 1000);
-  };
+    } else {
+      toast({
+        title: "Submission failed",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    toast({
+      title: "Network error",
+      description: "Please check your connection and try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   if (variant === "banner") {
     return (

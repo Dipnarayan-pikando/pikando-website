@@ -10,9 +10,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
         <Link href="/" data-testid="link-home">
-          <h1 className="text-xl sm:text-2xl font-bold text-foreground hover-elevate active-elevate-2 px-3 py-1 -ml-3 rounded-md cursor-pointer">
-            PIKANDO
-          </h1>
+         <h1
+  className="text-2xl sm:text-3xl font-extrabold font-[Montserrat] tracking-tight text-foreground px-3 py-1 -ml-3 rounded-md cursor-pointer select-none"
+>
+  pikando
+</h1>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6">
