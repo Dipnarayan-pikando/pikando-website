@@ -1,0 +1,13 @@
+# netlify.toml
+[build]
+  base    = ""                # root of repo
+  command = "npm ci --prefix client && npm run --prefix client build"
+  publish = "client/dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
