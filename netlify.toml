@@ -1,7 +1,6 @@
-# netlify.toml
 [build]
   command = "npm install && npm run build"
-  publish = "dist"
+  publish = "dist/public"
 
 [build.environment]
   NODE_VERSION = "18"
