@@ -4,3 +4,6 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+# Ignore Flutter-related files
+attached_assets/
+*.dart
